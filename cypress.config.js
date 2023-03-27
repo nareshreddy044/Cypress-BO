@@ -4,7 +4,7 @@ module.exports = defineConfig({
   e2e: {
     
     setupNodeEvents(on, config) {
-      experimentalSessionAndOrigin: true
+      //experimentalSessionAndOrigin: true
       // implement node event listeners here
     },
   },
