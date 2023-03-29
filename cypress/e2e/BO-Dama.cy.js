@@ -9,7 +9,11 @@ import cashdepositclass from "../Pages/codeblocks/cashdeposit"
 describe('dama-BO', () => {
   beforeEach(() => {
     loginclass.loginmethod()
-    })
+    if (Cypress.mocha.getRunner().test.parent.title.includes('BO-cashdepositapprove')) {
+      return;
+    } 
+    //loginclass.approverlogin()
+  })
   it('BO-login', () => {
       const una=new usernameassertion();
       una.usernameassertion()
@@ -33,17 +37,18 @@ describe('dama-BO', () => {
   it('BO-A2A dashbaord export', () => {
     A2Atransferclass.A2Aexportmethod()
     })
-  it('BO-Credit Adjustment create', () => {
+  it.only('BO-Credit Adjustment create', () => {
     adjustmentclass.adjustmentmethod()
     })
-  it('BO-Credit Adjustment approve', () => {
+  it.only('BO-Credit Adjustment approve', () => {
       loginclass.approverlogin()
       adjustmentclass.adjustmentapprovemethod()
       })
   it('BO-cash deposit create', () => {
         cashdepositclass.cashdepositmethod()
         })
-  it.only('BO-cash deposit approve', () => {
+  it('BO-cashdepositapprove', () => {
+        loginclass.approverlogin()
           cashdepositclass.cashdepositmethodapprove()
           })
 })

@@ -23,6 +23,7 @@ class adjustmentclass
       adj.adjustmentinternalremarks()
       adj.adjustmentsubmit()
       adj.adjustmentiframe()
+      adj.adjustmenttransactionid()
     
 }
 static adjustmentapprovemethod()
@@ -32,16 +33,15 @@ static adjustmentapprovemethod()
       adj.transactionprocessingbutton()
       adj.adjustmentselect()
       adj.adjustmentsearch()
-      adj.adjustmentsearchstatus()
-      adj.adjustmentsearchstatusselect()
-      adj.adjustmentsearchclientaccnumber()
-      adj.adjustmentsearchremarks()
-      adj.adjustmentsearchinternalremarks()
+      // adj.adjustmentsearchstatus()
+      // adj.adjustmentsearchstatusselect()
+      // adj.adjustmentsearchclientaccnumber()
+      // adj.adjustmentsearchremarks()
+      // adj.adjustmentsearchinternalremarks()
+      adj.adjustmenttransactionidtype()
       adj.adjustmentsearchsubmit()
       adj.adjustmentapprovebutton()
       adj.adjustmentapprovebuttoniframe()
-      
-    
 }
 
 }
