@@ -143,6 +143,7 @@ class adjustment
     adjustmentapprovebuttoniframe()
     {
     cy.get(Adjustloc.Approve_iframe).click()
+    cy.wait(3000)
  }
 }
 
