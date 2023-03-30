@@ -9,9 +9,9 @@ import cashdepositclass from "../Pages/codeblocks/cashdeposit"
 describe('dama-BO', () => {
   beforeEach(() => {
     loginclass.loginmethod()
-    if (Cypress.mocha.getRunner().test.parent.title.includes('BO-cashdepositapprove')) {
-      return;
-    } 
+    // if (Cypress.mocha.getRunner().test.parent.title.includes('BO-cashdepositapprove')) {
+    //   return;
+    // } 
     //loginclass.approverlogin()
   })
   it('BO-login', () => {
