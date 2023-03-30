@@ -134,7 +134,7 @@ class adjustment
     adjustmentapprovebutton()
     {
         
-        cy.get('.pull-right > .fa').click()
+        cy.get(Adjustloc.frame_expand).click()
         //cy.xpath("//table[@id='DataTables_Table_2']/tbody[1]/tr[1]/td[16]/span[1]/a[1]").click()
         
         cy.xpath(Adjustloc.Adj_approve).click()

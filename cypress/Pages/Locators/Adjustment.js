@@ -23,6 +23,7 @@ export const Adjustloc = {
     Search_submit : "button[type='submit']",
     Adj_approve : "//table[@id='DataTables_Table_2']/tbody[1]/tr[1]/td[16]/span[1]/a[1]",
     Approve_iframe : '#centralModalSuccess > .modal-dialog > .modal-content > .modal-footer > .btn-dark',
+    frame_expand : '.pull-right > .fa',
 
     
       }
