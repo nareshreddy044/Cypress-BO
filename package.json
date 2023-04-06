@@ -9,12 +9,13 @@
   "author": "Naresh",
   "license": "ISC",
   "dependencies": {
-    "cypress": "^12.8.0",
     "cypress-downloadfile": "^1.2.3",
     "cypress-xpath": "^2.0.1",
     "D": "^1.0.0"
   },
   "devDependencies": {
-    "@cypress/xpath": "^2.0.3"
+    "@cypress/xpath": "^2.0.3",
+    "cypress": "^12.8.1",
+    "cypress-mochawesome-reporter": "^3.3.0"
   }
 }

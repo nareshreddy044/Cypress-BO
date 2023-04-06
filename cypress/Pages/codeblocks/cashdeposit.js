@@ -18,6 +18,7 @@ class cashdepositclass
       cd.cashdepositremarks()
       cd.cashdepositinternalremarks()
       cd.cashdepositsubmit()
+      cd.cashdeposittransactionid()
     }
     static cashdepositmethodapprove()
     {
@@ -26,14 +27,15 @@ class cashdepositclass
       cd.transactionprocessingbutton()
       cd.cashdepositselect()
       cd.cashdepositsearch()
-      cd.cashdepositsearchstatus()
-      cd.cashdepositsearchstatusselect()
-      cd.cashdepositsearchclientaccnumber()
-      cd.cashdepositsearchremarks()
-      cd.cashdepositsearchinternalremarks()
+      cd.cashdepositsearchtransactionid()
+      // cd.cashdepositsearchstatus()
+      // cd.cashdepositsearchstatusselect()
+      // cd.cashdepositsearchclientaccnumber()
+      // cd.cashdepositsearchremarks()
+      // cd.cashdepositsearchinternalremarks()
       cd.cashdepositsearchsubmit()
       cd.cashdepositapprovebutton()
-      cd.cashdepositapprovebuttoniframe()
+      //cd.cashdepositapprovebuttoniframe()
       
     }
 }

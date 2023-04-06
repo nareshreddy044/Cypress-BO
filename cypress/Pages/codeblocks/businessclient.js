@@ -1,4 +1,4 @@
-import businessclient from "../Businessclientpage";
+import businessclient from "../non transactional/Businessclientpage";
 class businessclientclass{
 static businessclientsearch()
 {
