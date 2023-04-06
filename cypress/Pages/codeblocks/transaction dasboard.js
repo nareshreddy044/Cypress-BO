@@ -1,5 +1,5 @@
-import search from "../Searchpages";
-import fileexport from "../fileexport";
+import fileexport from "../non transactional/fileexport";
+import search from "../non transactional/Searchpages";
 class transactiondashboard{
      static transactionsearch(){
         const sr = new search;

@@ -3,9 +3,11 @@ const { defineConfig } = require("cypress");
 
 
 module.exports = defineConfig({
+  reporter: "cypress-mochawesome-reporter",//for html report
   e2e: {
     setupNodeEvents(on, config) {
-      pageLoadTimeout: 10000
+      require('cypress-mochawesome-reporter/plugin')(on);// for html report
+      this.screenshotOnRunFailure=true;
       //experimentalSessionAndOrigin: true
       // implement node event listeners here
     },

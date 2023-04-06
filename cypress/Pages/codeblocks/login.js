@@ -1,5 +1,5 @@
-import Login from "../Loginpage";
-import url from "../url";
+import Login from "../non transactional/Loginpage";
+import url from "../non transactional/url";
 class loginclass
 {
 static approverlogin()
