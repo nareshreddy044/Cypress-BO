@@ -9,6 +9,7 @@
   "author": "Naresh",
   "license": "ISC",
   "dependencies": {
+    "chai": "^4.3.7",
     "cypress-downloadfile": "^1.2.3",
     "cypress-xpath": "^2.0.1",
     "D": "^1.0.0"

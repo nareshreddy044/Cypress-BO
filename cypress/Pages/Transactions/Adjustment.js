@@ -108,20 +108,20 @@ class adjustment
         console.log(constants.adjtransId);
         cy.get(Adjustloc.Txn_id_search).type(constants.adjtransId);
     }
-    adjustmentapproveassertion()
-    {
-        cy.intercept('POST', 'https://service.damastage.com/api/adjust/list', (req) => {
-            req.reply((res) => {
-                alert(res.body);
-              console.log(res.body); // Print the response body to console
-              res.send(); // Send the response back to the client
-            });
-          });
+    // adjustmentapproveassertion()
+    // {
+    //     cy.intercept('POST', 'https://service.damastage.com/api/adjust/list', (req) => {
+    //         req.reply((res) => {
+    //             alert(res.body);
+    //           console.log(res.body); // Print the response body to console
+    //           res.send(); // Send the response back to the client
+    //         });
+    //       });
           
           
 
 
-        }
+       // }
         
     adjustmentsearchsubmit()
     {
