@@ -3,6 +3,7 @@
 import {constants} from '../Transactions/const.js';
 import { testdata } from "../../fixtures/testdata.js";
 import {Adjustloc} from "../Locators/Adjustment.js"
+import url from "../non transactional/url";
 
 require('@cypress/xpath');
 class adjustment
@@ -107,26 +108,21 @@ class adjustment
         console.log(constants.adjtransId);
         cy.get(Adjustloc.Txn_id_search).type(constants.adjtransId);
     }
-    // adjustmentsearchstatus()
-    // {
-    //     cy.get(':nth-child(2) > :nth-child(2) > .form-group > .col-sm-12 > .dama-select-box-forminput > .below > .single').click()
-    // }
-    // adjustmentsearchstatusselect()
-    // {
-    //     cy.get(':nth-child(2) > .deselect-option').click()
-    // }
-    // adjustmentsearchclientaccnumber()
-    // {
-    //     cy.get("#walletAccountNumber").type("7110045189")
-    // }
-    // adjustmentsearchremarks()
-    // {
-    //     cy.get(':nth-child(3) > .odd > :nth-child(14)').should("contain","remarks")
-    // }
-    // adjustmentsearchinternalremarks()
-    // {
-    //     cy.get('table#DataTables_Table_2>tbody>tr>td:nth-of-type(15)').should("contain","internalremarks")
-    // }
+    adjustmentapproveassertion()
+    {
+        cy.intercept('POST', 'https://service.damastage.com/api/adjust/list', (req) => {
+            req.reply((res) => {
+                alert(res.body);
+              console.log(res.body); // Print the response body to console
+              res.send(); // Send the response back to the client
+            });
+          });
+          
+          
+
+
+        }
+        
     adjustmentsearchsubmit()
     {
         cy.get(Adjustloc.Search_submit).click()
@@ -146,5 +142,4 @@ class adjustment
     cy.wait(3000)
  }
 }
-
 export default adjustment; 
