@@ -40,7 +40,7 @@ describe('dama-BO', () => {
   it.only('BO-Credit Adjustment create', () => {
     adjustmentclass.adjustmentmethod()
     })
-  it('BO-Credit Adjustment approve', () => {
+  it.only('BO-Credit Adjustment approve', () => {
       loginclass.approverlogin()
       adjustmentclass.adjustmentapprovemethod()
     })
@@ -53,12 +53,13 @@ describe('dama-BO', () => {
     })
   it('BO-cashdepositapprove', () => {
     cy.visit("https://service.damastage.com/#/dplogin")
-    cy.intercept('POST', '/api/auth/login”).as(“login'),
+    cy.intercept('POST', '/api/auth/login').as('login'),
     cy.title().should('eq', 'DamaPay BackOffice'),
     cy.get("#materialFormLoginUserEx").type("Nareshtwo"),
     cy.get("#materialFormLoginPasswordEx").type("P@ssw0rd123"),
     cy.get("#login-form").submit()
     cy.wait("@login")
+    cy.wait()
     })
   
 })
