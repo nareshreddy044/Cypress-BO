@@ -1,14 +1,14 @@
 {
   "stats": {
     "suites": 1,
-    "tests": 1,
-    "passes": 1,
+    "tests": 2,
+    "passes": 2,
     "pending": 0,
     "failures": 0,
-    "start": "2023-04-06T17:43:51.058Z",
-    "end": "2023-04-06T17:44:15.043Z",
-    "duration": 23985,
-    "testsRegistered": 1,
+    "start": "2023-04-07T11:26:49.081Z",
+    "end": "2023-04-07T11:27:28.240Z",
+    "duration": 39159,
+    "testsRegistered": 2,
     "passPercent": 100,
     "pendingPercent": 0,
     "other": 0,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "781a1f55-6adb-4a39-ac69-3fb202cc91fb",
+      "uuid": "0e9bb3d6-0674-401b-8f56-34bb50dfbe08",
       "title": "",
       "fullFile": "cypress/e2e/BO-Dama.cy.js",
       "file": "cypress/e2e/BO-Dama.cy.js",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "3fe2737e-58b0-41eb-a628-87af26725d97",
+          "uuid": "278fa1f6-2fe6-43ad-a4d2-6708a148e113",
           "title": "dama-BO",
           "fullFile": "",
           "file": "",
@@ -38,7 +38,7 @@
               "title": "BO-Credit Adjustment create",
               "fullTitle": "dama-BO BO-Credit Adjustment create",
               "timedOut": null,
-              "duration": 20881,
+              "duration": 18830,
               "state": "passed",
               "speed": "slow",
               "pass": true,
@@ -47,20 +47,39 @@
               "context": null,
               "code": "_Adjustment.default.adjustmentmethod();",
               "err": {},
-              "uuid": "b6439b02-448f-4eef-a645-90499441f9af",
-              "parentUUID": "3fe2737e-58b0-41eb-a628-87af26725d97",
+              "uuid": "165b84f6-74a3-4862-898c-44090bdbd776",
+              "parentUUID": "278fa1f6-2fe6-43ad-a4d2-6708a148e113",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "BO-Credit Adjustment approve",
+              "fullTitle": "dama-BO BO-Credit Adjustment approve",
+              "timedOut": null,
+              "duration": 17164,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "_login.default.approverlogin();\n_Adjustment.default.adjustmentapprovemethod();",
+              "err": {},
+              "uuid": "55c16c64-d523-4f74-a356-2501fc4181e9",
+              "parentUUID": "278fa1f6-2fe6-43ad-a4d2-6708a148e113",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "b6439b02-448f-4eef-a645-90499441f9af"
+            "165b84f6-74a3-4862-898c-44090bdbd776",
+            "55c16c64-d523-4f74-a356-2501fc4181e9"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 20881,
+          "duration": 35994,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
