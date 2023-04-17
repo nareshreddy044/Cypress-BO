@@ -51,15 +51,15 @@ describe('dama-BO', () => {
         loginclass.approverlogin()
           cashdepositclass.cashdepositmethodapprove()
     })
-  it('BO-cashdepositapprove', () => {
-    cy.visit("https://service.damastage.com/#/dplogin")
-    cy.intercept('POST', '/api/auth/login').as('login'),
-    cy.title().should('eq', 'DamaPay BackOffice'),
-    cy.get("#materialFormLoginUserEx").type("Nareshtwo"),
-    cy.get("#materialFormLoginPasswordEx").type("P@ssw0rd123"),
-    cy.get("#login-form").submit()
-    cy.wait("@login")
-    cy.wait()
-    })
+  // it('BO-cashdepositapprove', () => {
+  //   cy.visit("https://service.damastage.com/#/dplogin")
+  //   cy.intercept('POST', '/api/auth/login').as('login'),
+  //   cy.title().should('eq', 'DamaPay BackOffice'),
+  //   cy.get("#materialFormLoginUserEx").type("Nareshtwo"),
+  //   cy.get("#materialFormLoginPasswordEx").type("P@ssw0rd123"),
+  //   cy.get("#login-form").submit()
+  //   cy.wait("@login")
+  //   cy.wait()
+  //   })
   
 })
