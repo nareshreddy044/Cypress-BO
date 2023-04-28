@@ -3,5 +3,7 @@ export const testdata = {
     TxnAmount : "12",
     Remarks : "remarks",
     InternalRemarks :"internalremarks",
-    
+    A2Aamount:"12",
+    Fromaccount: "7110045189",
+    Toaccount:"7110045122"
 }

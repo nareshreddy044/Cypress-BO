@@ -1,93 +1,98 @@
+import { A2Aloc } from "../Locators/A2A"
+import { Adjustloc } from "../Locators/Adjustment"
+import { testdata } from "../../fixtures/testdata.js";
+
+
 class A2ATransfer
 {
-    transactionprocessingbutton(transactionprocessingbutton)
+    transactionprocessingbutton()
     {
-        cy.xpath("//a[contains(.,'Transaction Processing')]").click()
+        cy.xpath(Adjustloc.Txn_processing).click()
     }
-    A2Atransferbutton(A2Atransferbutton)
+    A2Atransferbutton()
     {
-        cy.xpath("//a[text()='A2A Transfer']").click()
+        cy.xpath(A2Aloc.A2ATransferbtn).click()
     }
-    initiateA2A(initiateA2A)
+    initiateA2A()
     {
-        cy.get('.justify-content-right > :nth-child(2)').click()
+        cy.get(A2Aloc.A2Ainitiatebtn).click()
     }
-    A2Aclientnameenter(A2Aclientnameenter)
+    A2Aclientnameenter()
     {
-        cy.get("input[type='search']").type("TVS infra llc")
+        cy.get(A2Aloc.A2Aclientname).type(testdata.clientname)
     }
-    A2Aclientnameselect(A2Aclientnameselect)
+    A2Aclientnameselect()
     {
-        cy.get("li.list-option").click()
+        cy.get(A2Aloc.A2Aclientnameselect).click()
     }
-    A2Aclientnameselect(A2Aclientnameselect)
+    // A2Aclientnameselect(A2Aclientnameselect)
+    // {
+    //     cy.get("li.list-option").click()
+    // }
+    A2Afromaccount()
     {
-        cy.get("li.list-option").click()
+        cy.get(A2Aloc.A2Afromaccount).click()
     }
-    A2Afromaccount(A2Afromaccount)
+    A2Afromaccountselect()
     {
-        cy.get('#fromWalletAccountNumber > .below > .single').click()
+        cy.xpath(A2Aloc.A2Afromaccountselect).click()
     }
-    A2Afromaccountselect(A2Afromaccountselect)
+    A2Atoaccount()
     {
-        cy.xpath("//span[text()='7110045189']").click()
+        cy.get(A2Aloc.A2Atoaccount).click()
     }
-    A2Atoaccount(A2Atoaccount)
+    A2Atoaccountselect()
     {
-        cy.get(':nth-child(2) > .form-group > div.col-sm-12 > .dama-select-box-forminput > .below > .single').click()
-    }
-    A2Atoaccountselect(A2Atoaccountselect)
-    {
-        cy.xpath("//span[text()='7110045122']").click()
+        cy.xpath(A2Aloc.A2Atoaccountselect).click()
     }
     A2Aamount(A2Aamount)
     {
-        cy.get('#amount').type("12")
+        cy.get(A2Aloc.A2Aamount).type(testdata.A2Aamount)
     }
-    A2Aremarks(A2Aremarks)
+    A2Aremarks()
     {
-        cy.get('#remarks1').type("remarks")
+        cy.get(A2Aloc.A2Aremarks).type(testdata.Remarks)
     }
-    A2Ainternalremarks(A2Ainternalremarks)
+    A2Ainternalremarks()
     {
-        cy.get('#internalRemarks').type("internalremarks")
+        cy.get(A2Aloc.A2Ainternalremarks).type(testdata.InternalRemarks)
     }
-    A2Asubmit(A2Asubmit)
+    A2Asubmit()
     {
-        cy.get("button[type='submit']").click()
+        cy.get(A2Aloc.A2Asubmit).click()
     }
-    A2Asearchbutton(A2Asearch)
+    A2Asearchbutton()
     {
-        cy.get('.justify-content-left > .btn').click()
+        cy.get(A2Aloc.A2Asearch).click()
     }
-    A2Astatustab(A2Astatus)
+    A2Astatustab()
     {
-        cy.xpath("//div[text()=' status ']").click()
+        cy.xpath(A2Aloc.A2Astatus).click()
     }
-    A2Astatusselecttab(A2Astatusselect)
+    A2Astatusselecttab()
     {
-        cy.get(':nth-child(2) > .deselect-option').click()
+        cy.get(A2Aloc.A2Astatusselect).click()
     }
-    A2Afromaccountsearchtab(A2Afromaccountsearch)
+    A2Afromaccountsearchtab()
     {
-        cy.get("#fromWalletAccountNumber").type("7110045189")
+        cy.get(A2Aloc.A2Afromaccountsearch).type(testdata.Fromaccount)
     }
-    A2Atoaccountsearchtab(A2Atoaccountsearch)
+    A2Atoaccountsearchtab()
     {
-        cy.get('#toWalletAccountNumber').type("7110045122")
+        cy.get(A2Aloc.A2Atoaccountsearch).type(testdata.Toaccount)
     }
-    A2Asearchsubmitbutton(A2Asearchsubmit)
+    A2Asearchsubmitbutton()
     {
-        cy.get("button[type='submit']").click()
+        cy.get(A2Aloc.A2Asearchsubmit).click()
     }
 
-    A2Aapprovebutton(A2Aapprove)
+    A2Aapprovebutton()
     {
-        cy.get(':nth-child(3) > .odd > td.ng-star-inserted > span.ng-star-inserted > :nth-child(1)').click()
+        cy.get(A2Aloc.A2Aapprove).click()
     }
-    A2Aexport(A2Aexport)
+    A2Aexport()
     {
-        cy.get("button[title='Export data in selected format']").click()
+        cy.get(A2Aloc.A2Aexport).click()
     }
 }
 

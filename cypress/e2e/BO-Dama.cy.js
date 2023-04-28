@@ -27,10 +27,10 @@ describe('dama-BO', () => {
   it('BO-business client search view', () => {
     businessclientclass.businessclientsearch()
     })
-  it('BO-A2A transaction', () => {
+  it.only('BO-A2A transaction', () => {
     A2Atransferclass.A2Atransfermethod()
     })
-  it('BO-A2A transaction approve',() => {
+  it.only('BO-A2A transaction approve',() => {
     loginclass.approverlogin()
     A2Atransferclass.A2Atransferapprovemethod()
     })
@@ -54,15 +54,4 @@ describe('dama-BO', () => {
   it('BO-cashdepositExport', () => {
         cashdepositclass.cashdepositmethodexport()
   })
-  // it('BO-cashdepositapprove', () => {
-  //   cy.visit("https://service.damastage.com/#/dplogin")
-  //   cy.intercept('POST', '/api/auth/login').as('login'),
-  //   cy.title().should('eq', 'DamaPay BackOffice'),
-  //   cy.get("#materialFormLoginUserEx").type("Nareshtwo"),
-  //   cy.get("#materialFormLoginPasswordEx").type("P@ssw0rd123"),
-  //   cy.get("#login-form").submit()
-  //   cy.wait("@login")
-  //   cy.wait()
-  //   })
-  
 })
