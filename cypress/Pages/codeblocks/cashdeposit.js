@@ -38,5 +38,15 @@ class cashdepositclass
       //cd.cashdepositapprovebuttoniframe()
       
     }
+    static cashdepositmethodexport()
+    {
+      const cd = new cashdeposit();
+     
+      cd.transactionprocessingbutton()
+      cd.cashdepositselect()
+      cd.cashdepositexport()
+
+    }
+
 }
 export default cashdepositclass;

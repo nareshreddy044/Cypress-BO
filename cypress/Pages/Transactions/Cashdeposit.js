@@ -71,37 +71,12 @@ class cashdeposit
     }
     cashdepositsearchtransactionid()
     {
-        //var trxid = cashdeposittransactionid(getText)
+        
         console.log(constants.cdtransId);
         cy.get('#transactionId').type(constants.cdtransId);
 
-
-       //using cookie
-        // const trnxid = cy.getCookie('transId');
-       // cy.clearCookie('transId');
-     //   cy.get('#transactionId').type(trnxid);
-        
     }
-    // cashdepositsearchstatus()
-    // {
-    //     cy.get(':nth-child(2) > .form-group > .col-sm-12 > .dama-select-box-forminput').click()
-    // }
-    // cashdepositsearchstatusselect()
-    // {
-    //     cy.get(':nth-child(2) > .deselect-option').click()
-    // }
-    // cashdepositsearchclientaccnumber()
-    // {
-    //     cy.get("#walletAccountNumber").type("7110045189")
-    // }
-    // cashdepositsearchremarks()
-    // {
-    //     cy.get('table#DataTables_Table_2>tbody>tr>td:nth-of-type(17)').should("contain","remarks")
-    // }
-    // cashdepositsearchinternalremarks()
-    // {
-    //     cy.get('table#DataTables_Table_2>tbody>tr>td:nth-of-type(18)').should("contain","internalremarks")
-    // }
+    // 
     cashdepositsearchsubmit()
     {
         cy.get("button[type='submit']").click()
@@ -113,11 +88,6 @@ class cashdeposit
         cy.wait(5000)
         
     }
-    // cashdepositapprovebuttoniframe()
-    // {
-    //     cy.get(':nth-child(3) > #centralModalSuccess > .modal-dialog > .modal-content > .modal-footer > .btn-dark').click()
-    // }
-  
     cashdeposittransactionid()
     {
         cy.wait(4000);
@@ -129,10 +99,13 @@ class cashdeposit
           }
           getText().then((cashdeposittransactionid => {
             constants.cdtransId = cashdeposittransactionid;
-           // cy.setCookie('transId', transactionid);
             cy.log(constants.cdtransId);
           }))
           
+    }
+    cashdepositexport()
+    {
+        cy.get("button[title='Export data in selected format']").click();
     }
     
 }

@@ -30,17 +30,17 @@ describe('dama-BO', () => {
   it('BO-A2A transaction', () => {
     A2Atransferclass.A2Atransfermethod()
     })
-  it('BO-A2A transaction approve', { skipBeforeEach: true },() => {
+  it('BO-A2A transaction approve',() => {
     loginclass.approverlogin()
     A2Atransferclass.A2Atransferapprovemethod()
     })
   it('BO-A2A dashbaord export', () => {
     A2Atransferclass.A2Aexportmethod()
     })
-  it.only('BO-Credit Adjustment create', () => {
+  it('BO-Credit Adjustment create', () => {
     adjustmentclass.adjustmentmethod()
     })
-  it.only('BO-Credit Adjustment approve', () => {
+  it('BO-Credit Adjustment approve', () => {
       loginclass.approverlogin()
       adjustmentclass.adjustmentapprovemethod()
     })
@@ -51,6 +51,9 @@ describe('dama-BO', () => {
         loginclass.approverlogin()
           cashdepositclass.cashdepositmethodapprove()
     })
+  it('BO-cashdepositExport', () => {
+        cashdepositclass.cashdepositmethodexport()
+  })
   // it('BO-cashdepositapprove', () => {
   //   cy.visit("https://service.damastage.com/#/dplogin")
   //   cy.intercept('POST', '/api/auth/login').as('login'),
