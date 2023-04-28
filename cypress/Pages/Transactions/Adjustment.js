@@ -108,6 +108,8 @@ class adjustment
         console.log(constants.adjtransId);
         cy.get(Adjustloc.Txn_id_search).type(constants.adjtransId);
     }
+
+    //To Assert the response body status 
     // adjustmentapproveassertion()
     // {
     //     cy.intercept('POST', 'https://service.damastage.com/api/adjust/list', (req) => {

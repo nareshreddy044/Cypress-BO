@@ -37,7 +37,7 @@ static adjustmentapprovemethod()
       adj.adjustmentsearchsubmit()
       adj.adjustmentapprovebutton()
       adj.adjustmentapprovebuttoniframe()
-      //dj.adjustmentapproveassertion()
+      //adj.adjustmentapproveassertion()
 }
 
 }
