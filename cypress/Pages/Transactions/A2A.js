@@ -25,10 +25,6 @@ class A2ATransfer
     {
         cy.get(A2Aloc.A2Aclientnameselect).click()
     }
-    // A2Aclientnameselect(A2Aclientnameselect)
-    // {
-    //     cy.get("li.list-option").click()
-    // }
     A2Afromaccount()
     {
         cy.get(A2Aloc.A2Afromaccount).click()
