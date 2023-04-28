@@ -27,10 +27,10 @@ describe('dama-BO', () => {
   it('BO-business client search view', () => {
     businessclientclass.businessclientsearch()
     })
-  it.only('BO-A2A transaction', () => {
+  it('BO-A2A transaction', () => {
     A2Atransferclass.A2Atransfermethod()
     })
-  it.only('BO-A2A transaction approve',() => {
+  it('BO-A2A transaction approve',() => {
     loginclass.approverlogin()
     A2Atransferclass.A2Atransferapprovemethod()
     })
