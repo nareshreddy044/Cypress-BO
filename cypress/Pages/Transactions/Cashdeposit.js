@@ -107,6 +107,27 @@ class cashdeposit
     {
         cy.get("button[title='Export data in selected format']").click();
     }
+    cashdepositsearchbutton()
+    {
+        cy.xpath("(//button[contains(@class,'btn btn-dark')])[2]").click();
+    }
+    cashdeposit_search_by_transactiontype_list()
+    {
+        cy.xpath("(//div[@class='placeholder'])[1]").click();
+    }
+    cashdeposit_search_by_transactiontype_select()
+    {
+        cy.xpath("//span[text()='Cash Deposit Via ATM-One']").click();
+    }
+    cashdeposit_search_by_transactiontype_select()
+    {
+        cy.get("button[type='submit']").click();
+        cy.wait(2000)
+    }
+    cashdeposit_search_by_transactiontype_Assertion()
+    {
+        cy.get("(//td[text()='ATM-One'])[1]").contains("ATM-One");
+    }
     
 }
 

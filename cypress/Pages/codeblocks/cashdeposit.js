@@ -47,6 +47,18 @@ class cashdepositclass
       cd.cashdepositexport()
 
     }
+    static cashdepositsearch()
+    {
+      const cd = new cashdeposit();
+     
+      cd.transactionprocessingbutton()
+      cd.cashdepositselect()
+      cd.cashdepositsearchbutton()
+      cd.cashdeposit_search_by_transactiontype_list()
+      cd.cashdeposit_search_by_transactiontype_select()
+      cd.cashdeposit_search_by_transactiontype_Assertion()
+
+    }
 
 }
 export default cashdepositclass;

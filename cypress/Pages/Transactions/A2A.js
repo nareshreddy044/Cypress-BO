@@ -91,7 +91,4 @@ class A2ATransfer
         cy.get(A2Aloc.A2Aexport).click()
     }
 }
-
-
-
 export default A2ATransfer;

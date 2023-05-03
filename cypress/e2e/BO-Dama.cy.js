@@ -54,4 +54,7 @@ describe('dama-BO', () => {
   it('BO-cashdepositExport', () => {
         cashdepositclass.cashdepositmethodexport()
   })
+  it.only('BO-cashdepositsearch', () => {
+    cashdepositclass.cashdepositsearch()
+})
 })

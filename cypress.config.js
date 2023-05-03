@@ -24,6 +24,7 @@ module.exports = defineConfig({
       json: true,
       video: true,
       screenshotOnRunFailure:true,
+      screenshotsFolder : "TestReport/assets"
   }
   // reporter: "cypress-mochawesome-reporter",
 
