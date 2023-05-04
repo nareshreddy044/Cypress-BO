@@ -1,15 +1,15 @@
 {
   "stats": {
     "suites": 1,
-    "tests": 2,
-    "passes": 1,
+    "tests": 1,
+    "passes": 0,
     "pending": 0,
     "failures": 1,
-    "start": "2023-05-02T10:15:24.687Z",
-    "end": "2023-05-02T10:16:01.799Z",
-    "duration": 37112,
-    "testsRegistered": 2,
-    "passPercent": 50,
+    "start": "2023-05-03T12:59:19.003Z",
+    "end": "2023-05-03T12:59:39.735Z",
+    "duration": 20732,
+    "testsRegistered": 1,
+    "passPercent": 0,
     "pendingPercent": 0,
     "other": 0,
     "hasOther": false,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "699a8bfb-cd80-4c45-be45-ca89eaac624c",
+      "uuid": "e18a3211-66b2-4c82-8a37-e38fd134e568",
       "title": "",
       "fullFile": "cypress/e2e/BO-Dama.cy.js",
       "file": "cypress/e2e/BO-Dama.cy.js",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "859e32e0-68fc-477f-a138-05f099d113a7",
+          "uuid": "8f61c151-19aa-4808-aabd-dceb8a2e9765",
           "title": "dama-BO",
           "fullFile": "",
           "file": "",
@@ -35,56 +35,36 @@
           "afterHooks": [],
           "tests": [
             {
-              "title": "BO-A2A transaction",
-              "fullTitle": "dama-BO BO-A2A transaction",
+              "title": "BO-cashdepositsearch",
+              "fullTitle": "dama-BO BO-cashdepositsearch",
               "timedOut": null,
-              "duration": 21905,
-              "state": "passed",
-              "speed": "slow",
-              "pass": true,
-              "fail": false,
-              "pending": false,
-              "context": "{\n  \"title\": \"cypress-mochawesome-reporter-videos\",\n  \"value\": \"cypress/e2e/BO-Dama.cy.js\"\n}",
-              "code": "_A2Atransfer.default.A2Atransfermethod();",
-              "err": {},
-              "uuid": "f711f372-ac77-4ce7-8d34-979810718661",
-              "parentUUID": "859e32e0-68fc-477f-a138-05f099d113a7",
-              "isHook": false,
-              "skipped": false
-            },
-            {
-              "title": "BO-A2A transaction approve",
-              "fullTitle": "dama-BO BO-A2A transaction approve",
-              "timedOut": null,
-              "duration": 11545,
+              "duration": 17530,
               "state": "failed",
               "speed": null,
               "pass": false,
               "fail": true,
               "pending": false,
-              "context": "[\n  {\n    \"title\": \"cypress-mochawesome-reporter-videos\",\n    \"value\": \"cypress/e2e/BO-Dama.cy.js\"\n  },\n  {\n    \"title\": \"cypress-mochawesome-reporter-screenshots\",\n    \"value\": [\n      [\n        {\n          \"title\": \"Failed screenshot\",\n          \"value\": \"/BO-Dama.cy.js/dama-BO -- BO-A2A transaction approve (failed).png\"\n        }\n      ]\n    ]\n  }\n]",
-              "code": "_login.default.approverlogin();\n_A2Atransfer.default.A2Atransferapprovemethod1();",
+              "context": "[\n  {\n    \"title\": \"cypress-mochawesome-reporter-videos\",\n    \"value\": \"cypress/e2e/BO-Dama.cy.js\"\n  },\n  {\n    \"title\": \"cypress-mochawesome-reporter-screenshots\",\n    \"value\": [\n      [\n        {\n          \"title\": \"Failed screenshot\",\n          \"value\": \"/BO-Dama.cy.js/dama-BO -- BO-cashdepositsearch (failed).png\"\n        }\n      ]\n    ]\n  }\n]",
+              "code": "// cashdepositclass.cashdepositsearchviatransactiontype()\n// cashdepositclass.cashdepositsearchviastatus()\n// cashdepositclass.cashdepositsearchviatransactionID()\n// cashdepositclass.cashdepositsearchviaclientaccountnumber()\n_cashdeposit.default.cashdepositsearchviadate();",
               "err": {
-                "message": "TypeError: _A2Atransfer.default.A2Atransferapprovemethod1 is not a function",
-                "estack": "TypeError: _A2Atransfer.default.A2Atransferapprovemethod1 is not a function\n    at Context.eval (webpack:///./cypress/e2e/BO-Dama.cy.js:35:21)",
+                "message": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `(d//button[contains(@class,'btn btn-dark')])[2]`, but never found it.",
+                "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `(d//button[contains(@class,'btn btn-dark')])[2]`, but never found it.\n    at cashdeposit.cashdepositsearchbutton (webpack:///./cypress/Pages/Transactions/Cashdeposit.js:114:11)\n    at cashdepositclass.cashdepositsearchviadate (webpack:///./cypress/Pages/codeblocks/cashdeposit.js:106:9)\n    at Context.eval (webpack:///./cypress/e2e/BO-Dama.cy.js:63:21)",
                 "diff": null
               },
-              "uuid": "28a6cac5-b20a-4e5c-91b0-ad40ed286a4c",
-              "parentUUID": "859e32e0-68fc-477f-a138-05f099d113a7",
+              "uuid": "7237ca7b-35d6-4a3f-8a0a-9cf5c9dc91a7",
+              "parentUUID": "8f61c151-19aa-4808-aabd-dceb8a2e9765",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
-          "passes": [
-            "f711f372-ac77-4ce7-8d34-979810718661"
-          ],
+          "passes": [],
           "failures": [
-            "28a6cac5-b20a-4e5c-91b0-ad40ed286a4c"
+            "7237ca7b-35d6-4a3f-8a0a-9cf5c9dc91a7"
           ],
           "pending": [],
           "skipped": [],
-          "duration": 33450,
+          "duration": 17530,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
@@ -122,7 +102,7 @@
         "html": true,
         "json": true,
         "video": true,
-        "screenshotOnRunFailure": true,
+        "screenshotOnRunFailure": false,
         "screenshotsFolder": "TestReport/assets"
       },
       "version": "6.2.0"

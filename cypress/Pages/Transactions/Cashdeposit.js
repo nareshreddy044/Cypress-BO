@@ -1,4 +1,6 @@
+import { testdata } from '../../fixtures/testdata.js';
 import {constants} from '../Transactions/const.js';
+const dayjs = require('dayjs')
  
 class cashdeposit
 
@@ -109,26 +111,77 @@ class cashdeposit
     }
     cashdepositsearchbutton()
     {
-        cy.xpath("(//button[contains(@class,'btn btn-dark')])[2]").click();
+        cy.xpath("(d//button[contains(@class,'btn btn-dark')])[2]").click();
     }
     cashdeposit_search_by_transactiontype_list()
     {
         cy.xpath("(//div[@class='placeholder'])[1]").click();
+      
     }
     cashdeposit_search_by_transactiontype_select()
     {
         cy.xpath("//span[text()='Cash Deposit Via ATM-One']").click();
     }
-    cashdeposit_search_by_transactiontype_select()
+    cashdeposit_search_submit()
     {
         cy.get("button[type='submit']").click();
-        cy.wait(2000)
+        
     }
     cashdeposit_search_by_transactiontype_Assertion()
     {
-        cy.get("(//td[text()='ATM-One'])[1]").contains("ATM-One");
+        cy.get(':nth-child(3) > .odd > :nth-child(7)').should("contain","ATM-One");
     }
+    cashdeposit_search_by_status_list()
+    {
+        cy.xpath("//div[text()=' status ']").click();
+        
+    }
+    cashdeposit_search_by_status_select()
+    {
+        cy.xpath("//span[text()='PENDING']").click();
+
+    }
+    cashdeposit_search_by_status_Assertion()
+    {
+        cy.xpath("(//td[text()=' PENDING '])[1]").should("contain","PENDING")
+    }
+    cashdeposit_search_refresh()
+    {
+        cy.xpath("(//button[contains(@class,'btn btn-blue-grey')])[2]").click();
+    }
+    cashdeposit_search_by_transaction_ID()
+    {
     
+        cy.get("#transactionId").type(testdata.Cdtrxid);
+    }
+    cashdeposit_search_by_Transaction_ID_Assertion()
+    {
+        cy.get("span.slider").should("contain",testdata.Cdtrxid)
+    }
+    cashdeposit_search_by_client_accountnumber()
+    {
+        
+        cy.get("#walletAccountNumber").type(testdata.Toaccount);
+        
+    }
+    cashdeposit_search_by_client_accountnumber_Assertion()
+    {
+        cy.get("table#DataTables_Table_2>tbody>tr>td:nth-of-type(5)").should("contain",testdata.Toaccount)
+    }
+    cashdeposit_search_by_date()
+    {
+        cy.get("mdb-date-picker[name='startDate1']").click();
+        cy.get('.picker__button--today').click();
+        //cy.getText("mdb-date-picker[name='startDate1']")
+        //const a = new Date()  // current date
+        const today = new Date()
+        const yesterday = new Date(today.setDate(today.getDate() -1))
+        const startDate = yesterday.toISOString()
+        cy.log(today,yesterday)
+        cy.get("mdb-date-picker[name='endDate1']").click();
+        cy.get('.picker__button--today').click();
+
+    }
 }
 
 export default cashdeposit;

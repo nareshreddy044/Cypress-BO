@@ -8,8 +8,7 @@
     "delete:reportFolder": "rm -rf mochawesome-report/",
     "test:cli": "npm run delete:reportFolder && cypress run",
     "merge:reports": "mochawesome-merge mochawesome-report/*.json > cypress-combined-report.json",
-"create:html:report": "npm run merge:reports && marge --reportDir TestReport cypress-combined-report.json"
-
+    "create:html:report": "npm run merge:reports && marge --reportDir TestReport cypress-combined-report.json"
   },
   "author": "Naresh",
   "license": "ISC",
@@ -17,7 +16,8 @@
     "chai": "^4.3.7",
     "cypress-downloadfile": "^1.2.3",
     "cypress-xpath": "^2.0.1",
-    "D": "^1.0.0"
+    "D": "^1.0.0",
+    "dayjs": "^1.11.7"
   },
   "devDependencies": {
     "@cypress/xpath": "^2.0.3",

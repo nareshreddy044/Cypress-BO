@@ -10,7 +10,7 @@ const bcs= new businessclient;
   bcs.clientselect()
   bcs.clientsearchsubmit()
   bcs.clientnamelink()
-  bcs.clientnamecheck
+  bcs.clientnamecheck()
 }
 }
 export default businessclientclass;
