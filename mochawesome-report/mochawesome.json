@@ -1,15 +1,15 @@
 {
   "stats": {
     "suites": 1,
-    "tests": 1,
-    "passes": 0,
+    "tests": 2,
+    "passes": 2,
     "pending": 0,
-    "failures": 1,
-    "start": "2023-05-03T12:59:19.003Z",
-    "end": "2023-05-03T12:59:39.735Z",
-    "duration": 20732,
-    "testsRegistered": 1,
-    "passPercent": 0,
+    "failures": 0,
+    "start": "2023-05-05T12:14:39.535Z",
+    "end": "2023-05-05T12:15:13.706Z",
+    "duration": 34171,
+    "testsRegistered": 2,
+    "passPercent": 100,
     "pendingPercent": 0,
     "other": 0,
     "hasOther": false,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "e18a3211-66b2-4c82-8a37-e38fd134e568",
+      "uuid": "b0a10d4f-ee5f-4734-b8fc-594ef672228a",
       "title": "",
       "fullFile": "cypress/e2e/BO-Dama.cy.js",
       "file": "cypress/e2e/BO-Dama.cy.js",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "8f61c151-19aa-4808-aabd-dceb8a2e9765",
+          "uuid": "53a4e495-8ad4-45d8-9864-ad1aa7a8c320",
           "title": "dama-BO",
           "fullFile": "",
           "file": "",
@@ -35,36 +35,51 @@
           "afterHooks": [],
           "tests": [
             {
-              "title": "BO-cashdepositsearch",
-              "fullTitle": "dama-BO BO-cashdepositsearch",
+              "title": "BO-cashdeposit bulkupload search",
+              "fullTitle": "dama-BO BO-cashdeposit bulkupload search",
               "timedOut": null,
-              "duration": 17530,
-              "state": "failed",
-              "speed": null,
-              "pass": false,
-              "fail": true,
+              "duration": 11880,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
               "pending": false,
-              "context": "[\n  {\n    \"title\": \"cypress-mochawesome-reporter-videos\",\n    \"value\": \"cypress/e2e/BO-Dama.cy.js\"\n  },\n  {\n    \"title\": \"cypress-mochawesome-reporter-screenshots\",\n    \"value\": [\n      [\n        {\n          \"title\": \"Failed screenshot\",\n          \"value\": \"/BO-Dama.cy.js/dama-BO -- BO-cashdepositsearch (failed).png\"\n        }\n      ]\n    ]\n  }\n]",
-              "code": "// cashdepositclass.cashdepositsearchviatransactiontype()\n// cashdepositclass.cashdepositsearchviastatus()\n// cashdepositclass.cashdepositsearchviatransactionID()\n// cashdepositclass.cashdepositsearchviaclientaccountnumber()\n_cashdeposit.default.cashdepositsearchviadate();",
-              "err": {
-                "message": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `(d//button[contains(@class,'btn btn-dark')])[2]`, but never found it.",
-                "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `(d//button[contains(@class,'btn btn-dark')])[2]`, but never found it.\n    at cashdeposit.cashdepositsearchbutton (webpack:///./cypress/Pages/Transactions/Cashdeposit.js:114:11)\n    at cashdepositclass.cashdepositsearchviadate (webpack:///./cypress/Pages/codeblocks/cashdeposit.js:106:9)\n    at Context.eval (webpack:///./cypress/e2e/BO-Dama.cy.js:63:21)",
-                "diff": null
-              },
-              "uuid": "7237ca7b-35d6-4a3f-8a0a-9cf5c9dc91a7",
-              "parentUUID": "8f61c151-19aa-4808-aabd-dceb8a2e9765",
+              "context": "{\n  \"title\": \"cypress-mochawesome-reporter-videos\",\n  \"value\": \"cypress/e2e/BO-Dama.cy.js\"\n}",
+              "code": "_Cashdepositbulk.default.cashdeposit_bulkupload_search();",
+              "err": {},
+              "uuid": "4da7df45-5bfa-4524-871f-e14cc9a761f8",
+              "parentUUID": "53a4e495-8ad4-45d8-9864-ad1aa7a8c320",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "BO-cashdeposit bulkupload export",
+              "fullTitle": "dama-BO BO-cashdeposit bulkupload export",
+              "timedOut": null,
+              "duration": 19268,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": "{\n  \"title\": \"cypress-mochawesome-reporter-videos\",\n  \"value\": \"cypress/e2e/BO-Dama.cy.js\"\n}",
+              "code": "_Cashdepositbulk.default.cashdeposit_bulkupload_export();",
+              "err": {},
+              "uuid": "41e7078c-d58d-4d1a-a02b-5abdf73119b9",
+              "parentUUID": "53a4e495-8ad4-45d8-9864-ad1aa7a8c320",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
-          "passes": [],
-          "failures": [
-            "7237ca7b-35d6-4a3f-8a0a-9cf5c9dc91a7"
+          "passes": [
+            "4da7df45-5bfa-4524-871f-e14cc9a761f8",
+            "41e7078c-d58d-4d1a-a02b-5abdf73119b9"
           ],
+          "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 17530,
+          "duration": 31148,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
@@ -102,7 +117,7 @@
         "html": true,
         "json": true,
         "video": true,
-        "screenshotOnRunFailure": false,
+        "screenshotOnRunFailure": true,
         "screenshotsFolder": "TestReport/assets"
       },
       "version": "6.2.0"

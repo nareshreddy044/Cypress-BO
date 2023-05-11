@@ -27,3 +27,4 @@
 /// <reference types="cypress-xpath" />
 require('cypress-downloadfile/lib/downloadFileCommand')
 require('@cypress/xpath');
+import 'cypress-file-upload';

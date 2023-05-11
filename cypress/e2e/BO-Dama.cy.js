@@ -4,9 +4,10 @@ import businessclientclass from "../Pages/codeblocks/businessclient"
 import A2Atransferclass from "../Pages/codeblocks/A2Atransfer"
 import adjustmentclass from "../Pages/codeblocks/Adjustment"
 import cashdepositclass from "../Pages/codeblocks/cashdeposit"
-import abc from "../fixtures/abc"
+import LoginBeforeeach from "../fixtures/LoginBeforeeach"
+import cashdepositbulk from "../Pages/codeblocks/Cashdepositbulk"
 describe('dama-BO', () => {
-abc.abcmethod()
+LoginBeforeeach.abcmethod()
 //it.only will execute that particular test case, else will execute all 
   it('BO-login', () => { const un=new usernameassertion();un.usernameassertion() })
   it('BO-transactions dasahboard search', () => { transactiondashboard.transactionsearch()})
@@ -25,4 +26,8 @@ abc.abcmethod()
   it('BO-cashdepositsearch', () => { cashdepositclass.cashdepositsearchviatransactionID() })
   it('BO-cashdepositsearch', () => { cashdepositclass.cashdepositsearchviaclientaccountnumber() })
   it('BO-cashdepositsearch', () => { cashdepositclass.cashdepositsearchviadate() })
+  it('BO-cashdepositbulkupload', () => { cashdepositbulk.cashdepositbulkmethod() })
+  it('BO-cashdeposit bulkupload approve', () => { cashdepositbulk.cashdepositbulkapprovemethod() })
+  it.only('BO-cashdeposit bulkupload search', () => { cashdepositbulk.cashdeposit_bulkupload_search() })
+  it.only('BO-cashdeposit bulkupload export', () => { cashdepositbulk.cashdeposit_bulkupload_export() })
 })

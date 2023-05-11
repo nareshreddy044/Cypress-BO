@@ -9,6 +9,7 @@ beforeEach(() => {
            case 'BO-A2A transaction approve':
             case 'BO-Credit Adjustment approve':
             case 'BO-cashdepositapprove':
+              case 'BO-cashdeposit bulkupload approve':
            // this method will execute when above testcases are matched 
            loginclass.approverlogin()
                 
